@@ -1,4 +1,4 @@
-{% load static %}
+{% load static django_vite %}
 
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,7 +42,8 @@
 <meta property="og:image" content="https://flowbite-admin-dashboard.vercel.app/images/og-image.png">
 <meta property="og:image:type" content="image/png">
 
-<link rel="stylesheet" href="{% static 'dist/main.css' %}">
+{% vite_hmr_client %}
+{% vite_asset 'static/assets/index.js' %}
 
 <script>
 
